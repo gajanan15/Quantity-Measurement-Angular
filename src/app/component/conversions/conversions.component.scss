@@ -1,0 +1,36 @@
+.conversion-input {
+  width: 980px;
+  margin-left: 14%;
+}
+
+.from-text {
+  margin: 2% 0% 0% 15%;
+}
+
+.to-text {
+  margin: 2% 15% 0% 0%;
+}
+
+.input-value {
+  height: 51px;
+  width: 300px;
+  border: 1px solid #e7dcfe;
+  background-color: white;
+  font-size: 31px;
+  padding-left: 20px;
+  outline: none;
+}
+
+.selected-field {
+  width: 325px;
+  height: 45px;
+  border: 1px solid #e7dcfe;
+  outline: none;
+  padding-left: 20px;
+  font-family: Montserrat, Medium;
+}
+
+.from {
+  margin-left: 2%;
+  opacity: 0.65;
+}

@@ -1,0 +1,64 @@
+<div class="main">
+  <div class="sub-div">
+    <p class="type-name">CHOOSE TYPE</p>
+  </div>
+  <div class="units-div" fxLayout="row" fxLayoutAlign="center">
+    <div class="card-div" fxLayout="row" fxLayoutAlign="space-around none">
+      <mat-card
+        [(ngClass)]="length"
+        (mouseover)="changeLength = true"
+        (mouseout)="onOut()"
+        (click)="clickLength()"
+        ><img
+        id="length"
+          [src]="
+            changeLength == true
+              ? '../../../assets/images/length-color.png'
+              : '../../../assets/images/length-no-color.png'
+          "
+          alt="Unit-Type-Temperature"
+        />
+        <mat-card-content>
+          <p>Length</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card
+        [(ngClass)]="temperature"
+        (mouseover)="changeTemperature = true"
+        (mouseout)="onTempOut()"
+        (click)="clickTemperature()"
+        ><img
+        id="temperature"
+          [src]="
+            changeTemperature == true
+              ? '../../../assets/images/temperature.png'
+              : '../../../assets/images/temperature-no-color.png'
+          "
+          alt="Unit-Type-Temperature"
+        />
+        <mat-card-content>
+          <p>Temperature</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card
+        [(ngClass)]="volume"
+        (mouseover)="changeVolume = true"
+        (mouseout)="onOutVolume()"
+        (click)="clickVolume()"
+        ><img
+          id="Volume"
+          [src]="
+            changeVolume == true
+              ? '../../../assets/images/volume-color.png'
+              : '../../../assets/images/volume-no-color.png'
+          "
+          alt="Unit-Type-Volume"
+        />
+        <mat-card-content>
+          <p>Volume</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

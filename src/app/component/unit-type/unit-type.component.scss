@@ -1,0 +1,127 @@
+$lengthColor: #0ec098;
+$lengthBgColor: #edfdf9;
+$temperatureColor: #fd5160;
+$temperatureBgColor: #ffeef0;
+$volumeColor: #7224ff;
+$volumeBgColor: #e8ddff;
+
+.sub-div {
+  margin-left: 26%;
+  margin-top: 5%;
+}
+
+.type-name {
+  font-size: 15px;
+  font-family: Montserrat, Medium;
+}
+
+.example-card {
+  margin-left: 37%;
+  width: 173px;
+  height: 5%;
+}
+
+.card-div {
+  width: 50%;
+}
+
+#length {
+  width: 12px;
+  height: 46px;
+  margin-top: 11%;
+  margin-left: 46%;
+}
+
+#length:hover {
+  background-color: $lengthColor;
+}
+
+#temperature {
+  width: 30px;
+  height: 57px;
+  margin-top: 11%;
+  margin-left: 40%;
+}
+
+#Volume {
+  width: 46px;
+  height: 48px;
+  margin-top: 11%;
+  margin-left: 37%;
+}
+
+.card {
+  width: 170px;
+  height: 127px;
+  color: gray;
+  border-radius: 5%;
+  border: 1px solid grey;
+}
+
+.card-length:hover {
+  background-color: $lengthBgColor;
+  color: $lengthColor;
+  cursor: pointer;
+  border: 1px solid $lengthColor;
+  transition: 1s;
+}
+
+.card-hold-length {
+  width: 170px;
+  height: 127px;
+  border-radius: 5%;
+  border: 1px solid grey;
+  background-color: $lengthBgColor;
+  color: $lengthColor;
+  cursor: pointer;
+  border: 1px solid $lengthColor;
+  transition: 1s;
+}
+
+.card-hold-temperature {
+  width: 170px;
+  height: 127px;
+  border-radius: 5%;
+  border: 1px solid grey;
+  background-color: $temperatureBgColor;
+  color: $temperatureColor;
+  cursor: pointer;
+  border: 1px solid $temperatureColor;
+  transition: 1s;
+}
+
+.card-temperature:hover {
+  background-color: $temperatureBgColor;
+  color: $temperatureColor;
+  cursor: pointer;
+  border: 1px solid $temperatureColor;
+  transition: 1s;
+}
+
+.card-hold-volume {
+  width: 170px;
+  height: 127px;
+  border-radius: 5%;
+  border: 1px solid rgb(158, 155, 155);
+  background-color: $volumeBgColor;
+  color: $volumeColor;
+  cursor: pointer;
+  border: 1px solid $volumeColor;
+  transition: 1s;
+}
+
+.card-volume:hover {
+  background-color: $volumeBgColor;
+  color: $volumeColor;
+  cursor: pointer;
+  border: 1px solid $volumeColor;
+  transition: 1s;
+}
+mat-card-content p {
+  font-size: 22px;
+  // text-align: center;
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  font: normal normal bold 15px/19px Montserrat;
+}
