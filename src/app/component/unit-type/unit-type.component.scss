@@ -15,14 +15,8 @@ $volumeBgColor: #e8ddff;
   font-family: Montserrat, Medium;
 }
 
-.example-card {
-  margin-left: 37%;
-  width: 173px;
-  height: 5%;
-}
-
 .card-div {
-  width: 50%;
+  // width: 50%;
 }
 
 #length {
@@ -53,9 +47,10 @@ $volumeBgColor: #e8ddff;
 .card {
   width: 170px;
   height: 127px;
-  color: gray;
+  color: #808080;
   border-radius: 5%;
   border: 1px solid grey;
+  // margin: 15px;
 }
 
 .card-length:hover {
@@ -119,9 +114,25 @@ $volumeBgColor: #e8ddff;
 }
 mat-card-content p {
   font-size: 22px;
-  // text-align: center;
   margin-top: 8%;
   display: flex;
   justify-content: center;
   font: normal normal bold 15px/19px Montserrat;
+}
+
+@media screen and (max-width: 960px) {
+  .card {
+    width: 125px;
+    height: 120px;
+  }
+
+  .card-hold-volume {
+    width: 125px;
+    height: 120px;
+  }
+
+  .sub-div {
+    margin-left: 14%;
+    margin-top: 5%;
+  }
 }

@@ -2,17 +2,24 @@
   <div class="sub-div">
     <p class="type-name">CHOOSE TYPE</p>
   </div>
-  <div class="units-div" fxLayout="row" fxLayoutAlign="center">
-    <div class="card-div" fxLayout="row" fxLayoutAlign="space-around none">
+  <div class="units-div" fxLayout="row" fxLayoutAlign="center center">
+    <div
+      class="card-div"
+      fxFlex="50"
+      fxFlex.md="70"
+      fxFlex.sm="80"
+      fxLayout="row"
+      fxLayoutAlign="space-around none"
+    >
       <mat-card
         [(ngClass)]="length"
         (mouseover)="changeLength = true"
         (mouseout)="onOut()"
         (click)="clickLength()"
         ><img
-        id="length"
+          id="length"
           [src]="
-            changeLength == true
+            changeLength
               ? '../../../assets/images/length-color.png'
               : '../../../assets/images/length-no-color.png'
           "
@@ -29,9 +36,9 @@
         (mouseout)="onTempOut()"
         (click)="clickTemperature()"
         ><img
-        id="temperature"
+          id="temperature"
           [src]="
-            changeTemperature == true
+            changeTemperature
               ? '../../../assets/images/temperature.png'
               : '../../../assets/images/temperature-no-color.png'
           "
@@ -49,7 +56,7 @@
         ><img
           id="Volume"
           [src]="
-            changeVolume == true
+            changeVolume
               ? '../../../assets/images/volume-color.png'
               : '../../../assets/images/volume-no-color.png'
           "
@@ -62,3 +69,4 @@
     </div>
   </div>
 </div>
+<app-conversions [subUnit]="subUnit"></app-conversions>

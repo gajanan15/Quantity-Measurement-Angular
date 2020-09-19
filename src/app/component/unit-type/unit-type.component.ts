@@ -15,11 +15,9 @@ export class UnitTypeComponent implements OnInit {
   onTemperature: boolean = false;
   volume: string = 'card card-volume';
   onVolume: boolean = false;
-  constructor() {
-    // this.changeLength = true;
-    // this.changeTemperature = false;
-    // this.changeVolume=false;
-  }
+  subUnit = [];
+
+  constructor() {}
 
   clickVolume() {
     this.changeVolume = true;
@@ -31,10 +29,11 @@ export class UnitTypeComponent implements OnInit {
     this.changeTemperature = false;
     this.onLength = false;
     this.onTemperature = false;
+    this.subUnit = ['Liter', 'MiliLiter', 'Gallons'];
   }
 
   onOutVolume() {
-    if (this.onVolume == true) {
+    if (this.onVolume === true) {
       this.changeVolume = true;
     } else {
       this.changeVolume = false;
@@ -51,10 +50,11 @@ export class UnitTypeComponent implements OnInit {
     this.changeVolume = false;
     this.onLength = false;
     this.onVolume = false;
+    this.subUnit = ['celcius', 'fahrenheit'];
   }
 
   onTempOut() {
-    if (this.onTemperature == true) {
+    if (this.onTemperature === true) {
       this.changeTemperature = true;
     } else {
       this.changeTemperature = false;
@@ -71,10 +71,11 @@ export class UnitTypeComponent implements OnInit {
     this.changeVolume = false;
     this.onTemperature = false;
     this.onVolume = false;
+    this.subUnit = ['foot', 'inch', 'Meter', 'CentiMeter'];
   }
 
   onOut() {
-    if (this.onLength == true) {
+    if (this.onLength === true) {
       this.changeLength = true;
     } else {
       this.changeLength = false;
