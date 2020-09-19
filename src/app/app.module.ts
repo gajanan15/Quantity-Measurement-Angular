@@ -11,7 +11,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { ConversionsComponent } from './component/conversions/conversions.component';
 import { HomeComponent } from './component/home/home.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { HttpService } from './services/http_service/http.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,8 +31,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatToolbarModule,
     MatCardModule,
     MatSelectModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
