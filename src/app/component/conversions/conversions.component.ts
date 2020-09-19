@@ -9,6 +9,8 @@ export class ConversionsComponent implements OnInit {
   constructor() {}
 
   @Input() subUnit: any[];
+  @Input() inputOne: number;
+  @Input() inputTwo: number;
 
   ngOnInit(): void {}
 }

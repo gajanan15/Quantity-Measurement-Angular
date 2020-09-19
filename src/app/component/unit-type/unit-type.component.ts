@@ -16,6 +16,8 @@ export class UnitTypeComponent implements OnInit {
   volume: string = 'card card-volume';
   onVolume: boolean = false;
   subUnit = [];
+  inputOne: number = 0;
+  inputTwo: number = 0;
 
   constructor() {}
 
@@ -30,6 +32,8 @@ export class UnitTypeComponent implements OnInit {
     this.onLength = false;
     this.onTemperature = false;
     this.subUnit = ['Liter', 'MiliLiter', 'Gallons'];
+    this.inputOne = 1;
+    this.inputTwo = 1000;
   }
 
   onOutVolume() {
@@ -51,6 +55,8 @@ export class UnitTypeComponent implements OnInit {
     this.onLength = false;
     this.onVolume = false;
     this.subUnit = ['celcius', 'fahrenheit'];
+    this.inputOne = 0;
+    this.inputTwo = 32;
   }
 
   onTempOut() {
@@ -72,6 +78,8 @@ export class UnitTypeComponent implements OnInit {
     this.onTemperature = false;
     this.onVolume = false;
     this.subUnit = ['foot', 'inch', 'Meter', 'CentiMeter'];
+    this.inputOne = 1;
+    this.inputTwo = 12;
   }
 
   onOut() {
