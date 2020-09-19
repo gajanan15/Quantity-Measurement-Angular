@@ -34,3 +34,9 @@
   margin-left: 2%;
   opacity: 0.65;
 }
+
+option:checked, option:hover {
+  color: green;
+  background: lightgreen repeat ;
+}
+

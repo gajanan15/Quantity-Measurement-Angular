@@ -16,7 +16,10 @@
     <p class="from">To</p>
     <input type="text" [value]="inputTwo" class="input-value" />
     <select matNativeControl required class="selected-field">
-      <option *ngFor="let subUnit of subUnit" [selected]="i == 1">
+      <option
+        *ngFor="let subUnit of subUnit; let i = index"
+        [selected]="i == 1"
+      >
         {{ subUnit }}
       </option>
     </select>
