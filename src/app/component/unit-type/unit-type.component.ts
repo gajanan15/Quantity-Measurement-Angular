@@ -25,7 +25,9 @@ export class UnitTypeComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  clickVolume() {
+  clickVolume(value) {
+    console.log(value);
+    this.primaryUnit = value;
     this.changeVolume = true;
     this.temperature = 'card card-temperature';
     this.length = 'card card-length';
@@ -36,7 +38,7 @@ export class UnitTypeComponent implements OnInit {
     this.onLength = false;
     this.onTemperature = false;
     this.subUnit = ['LITRE', 'MILLILITRE', 'GALLON'];
-    this.inputOne = 1;
+    this.inputOne = 0;
     this.inputTwo = 1000;
   }
 
