@@ -23,7 +23,7 @@
               ? '../../../assets/images/length-color.png'
               : '../../../assets/images/length-no-color.png'
           "
-          alt="Unit-Type-Temperature"
+          alt="Unit-Type-Length"
         />
         <mat-card-content>
           <p>Length</p>
@@ -34,7 +34,7 @@
         [(ngClass)]="temperature"
         (mouseover)="changeTemperature = true"
         (mouseout)="onTempOut()"
-        (click)="clickTemperature()"
+        (click)="clickTemperature('TEMPERATURE')"
         ><img
           id="temperature"
           [src]="
