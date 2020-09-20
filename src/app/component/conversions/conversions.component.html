@@ -5,8 +5,18 @@
 >
   <div fxLayout="column" class="from-text">
     <p class="from">From</p>
-    <input type="text" [value]="inputOne" class="input-value" />
-    <select matNativeControl required class="selected-field">
+    <input
+      type="text"
+      [value]="inputOne"
+      (keyup)="conversionBox($event)"
+      class="input-value"
+    />
+    <select
+      matNativeControl
+      required
+      class="selected-field"
+      (click)="subUnits($event)"
+    >
       <option *ngFor="let subUnit of subUnit">
         {{ subUnit }}
       </option>
@@ -14,8 +24,13 @@
   </div>
   <div fxLayout="column" class="to-text">
     <p class="from">To</p>
-    <input type="text" [value]="inputTwo" class="input-value" />
-    <select matNativeControl required class="selected-field">
+    <input type="text" [value]="finalResult" class="input-value" />
+    <select
+      matNativeControl
+      required
+      class="selected-field"
+      (click)="subUnitsTWO($event)"
+    >
       <option
         *ngFor="let subUnit of subUnit; let i = index"
         [selected]="i == 1"

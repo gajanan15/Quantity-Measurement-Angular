@@ -18,8 +18,13 @@ export class UnitTypeComponent implements OnInit {
   subUnit = [];
   inputOne: number = 0;
   inputTwo: number = 0;
+  mainUnits = [];
+  primaryUnit: string;
 
   constructor() {}
+
+  ngOnInit(): void {
+  }
 
   clickVolume() {
     this.changeVolume = true;
@@ -31,7 +36,7 @@ export class UnitTypeComponent implements OnInit {
     this.changeTemperature = false;
     this.onLength = false;
     this.onTemperature = false;
-    this.subUnit = ['Liter', 'MiliLiter', 'Gallons'];
+    this.subUnit = ['LITRE', 'MILLILITRE', 'GALLON'];
     this.inputOne = 1;
     this.inputTwo = 1000;
   }
@@ -54,7 +59,7 @@ export class UnitTypeComponent implements OnInit {
     this.changeVolume = false;
     this.onLength = false;
     this.onVolume = false;
-    this.subUnit = ['celcius', 'fahrenheit'];
+    this.subUnit = ['CELSIUS', 'FAHRENHEIT'];
     this.inputOne = 0;
     this.inputTwo = 32;
   }
@@ -67,7 +72,9 @@ export class UnitTypeComponent implements OnInit {
     }
   }
 
-  clickLength() {
+  clickLength(x) {
+    console.log(x);
+    this.primaryUnit = x;
     this.changeLength = true;
     this.temperature = 'card card-temperature';
     this.volume = 'card card-volume';
@@ -77,8 +84,8 @@ export class UnitTypeComponent implements OnInit {
     this.changeVolume = false;
     this.onTemperature = false;
     this.onVolume = false;
-    this.subUnit = ['foot', 'inch', 'Meter', 'CentiMeter'];
-    this.inputOne = 1;
+    this.subUnit = ['FEET', 'INCH', 'YARD', 'CENTIMETER'];
+    this.inputOne = 0;
     this.inputTwo = 12;
   }
 
@@ -89,6 +96,4 @@ export class UnitTypeComponent implements OnInit {
       this.changeLength = false;
     }
   }
-
-  ngOnInit(): void {}
 }

@@ -15,7 +15,7 @@
         [(ngClass)]="length"
         (mouseover)="changeLength = true"
         (mouseout)="onOut()"
-        (click)="clickLength()"
+        (click)="clickLength('LENGTH')"
         ><img
           id="length"
           [src]="
@@ -69,4 +69,9 @@
     </div>
   </div>
 </div>
-<app-conversions [subUnit]="subUnit" [inputOne]="inputOne" [inputTwo]="inputTwo"></app-conversions>
+<app-conversions
+  [subUnit]="subUnit"
+  [inputOne]="inputOne"
+  [inputTwo]="inputTwo"
+  [primaryUnit]="primaryUnit"
+></app-conversions>

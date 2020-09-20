@@ -9,7 +9,7 @@ export class QuantityService {
   baseUrl = environment.apiUrl;
   constructor(private http: HttpService) {}
 
-  getAllUnits() {
-    return this.http.getService(this.baseUrl + 'unit/type');
+  conversionValue(data) {
+    return this.http.postService(data, this.baseUrl + `unit/convert`);
   }
 }
