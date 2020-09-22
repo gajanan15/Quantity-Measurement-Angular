@@ -1,15 +1,15 @@
-<div class="main">
-  <div class="sub-div">
-    <p class="type-name">CHOOSE TYPE</p>
-  </div>
-  <div class="units-div" fxLayout="row" fxLayoutAlign="center center">
+<div class="main" fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="column">
+    <div class="sub-div">
+      <p class="type-name">CHOOSE TYPE</p>
+    </div>
     <div
       class="card-div"
-      fxFlex="50"
-      fxFlex.md="70"
-      fxFlex.sm="80"
       fxLayout="row"
-      fxLayoutAlign="space-around none"
+      fxLayoutAlign="center center"
+      fxLayout.xs="column"
+      fxLayoutGap="20px"
+      fxLayoutGap.xs="10px"
     >
       <mat-card
         [(ngClass)]="length"

@@ -1,7 +1,6 @@
 <div
   class="conversion-input"
-  fxLayout="row"
-  fxLayoutAlign="space-evenly center"
+  fxLayout="row" fxLayoutAlign="center center" fxLayout.xs='column'
 >
   <div fxLayout="column" class="from-text">
     <p class="from">From</p>
@@ -15,21 +14,24 @@
       matNativeControl
       required
       class="selected-field"
-      (click)="subUnits($event)"
+      (click)="subUnits($event)"   
     >
       <option *ngFor="let subUnit of subUnit">
         {{ subUnit }}
       </option>
     </select>
   </div>
-  <div fxLayout="column" class="to-text">
+  <div fxLayout="column"  class="to-text">
     <p class="from">To</p>
-    <input type="text" [value]="finalResult" class="input-value" />
+    <input
+      type="text"
+      [value]="finalResult" class="input-value"
+    />
     <select
       matNativeControl
       required
       class="selected-field"
-      (click)="subUnitsTWO($event)"
+      (click)="subUnitsTWO($event)"    
     >
       <option
         *ngFor="let subUnit of subUnit; let i = index"

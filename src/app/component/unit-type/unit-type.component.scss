@@ -6,17 +6,12 @@ $volumeColor: #7224ff;
 $volumeBgColor: #e8ddff;
 
 .sub-div {
-  margin-left: 26%;
   margin-top: 5%;
 }
 
 .type-name {
   font-size: 15px;
   font-family: Montserrat, Medium;
-}
-
-.card-div {
-  // width: 50%;
 }
 
 #length {
@@ -50,7 +45,6 @@ $volumeBgColor: #e8ddff;
   color: #808080;
   border-radius: 5%;
   border: 1px solid grey;
-  // margin: 15px;
 }
 
 .card-length:hover {
@@ -120,19 +114,9 @@ mat-card-content p {
   font: normal normal bold 15px/19px Montserrat;
 }
 
-@media screen and (max-width: 960px) {
-  .card {
-    width: 125px;
-    height: 120px;
-  }
-
-  .card-hold-volume {
-    width: 125px;
-    height: 120px;
-  }
-
-  .sub-div {
-    margin-left: 14%;
-    margin-top: 5%;
+@media only screen and (min-device-width: 1020px) and (max-device-width: 1300px) {
+  .type-name {
+    font-size: 22px;
+    margin-left: 1%;
   }
 }

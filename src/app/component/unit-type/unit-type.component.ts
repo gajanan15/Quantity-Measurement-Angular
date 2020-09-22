@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ConversionsComponent } from './../conversions/conversions.component';
+import { Component, OnInit,ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-unit-type',
@@ -20,12 +21,27 @@ export class UnitTypeComponent implements OnInit {
   inputTwo: number = 0;
   mainUnits = [];
   primaryUnit: string;
-
-  constructor() {}
+ 
+  constructor() {
+    this.primaryUnit="LENGTH"
+    this.changeLength = true;
+    this.temperature = 'card card-temperature';
+    this.volume = 'card card-volume';
+    this.length = 'card-hold-length';
+    this.onLength = true;
+    this.changeTemperature = false;
+    this.changeVolume = false;
+    this.onTemperature = false;
+    this.onVolume = false;
+    this.subUnit = ['FEET', 'INCH', 'YARD', 'CENTIMETER'];
+    this.inputOne = 0;
+    this.inputTwo = 12;
+  }
 
   ngOnInit(): void {}
 
   clickVolume(value) {
+    
     console.log(value);
     this.primaryUnit = value;
     this.changeVolume = true;

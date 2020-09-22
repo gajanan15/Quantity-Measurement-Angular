@@ -1,15 +1,10 @@
-.conversion-input {
-  width: 980px;
-  margin-left: 14%;
-}
-
 .from-text {
-  margin: 2% 0% 0% 15%;
+  margin-top: 2%;
 }
 
-.to-text {
-  margin: 2% 15% 0% 0%;
-}
+ .to-text {
+margin-top: 2%;
+ }
 
 .input-value {
   height: 51px;
@@ -35,8 +30,34 @@
   opacity: 0.65;
 }
 
-option:checked, option:hover {
+option:checked,
+option:hover {
   color: green;
-  background: lightgreen repeat ;
+  background: lightgreen repeat;
 }
 
+// @media only screen and (min-device-width: 1020px) and (max-device-width: 1300px) {
+//   .conversion-input {
+//     width: 1000px;
+//   }
+
+//   .input-value {
+//     height: 40px;
+//     width: 280px;
+//   }
+
+//   .selected-field {
+//     width: 300px;
+//     height: 40px;
+//     margin-left: 0%;
+//   }
+
+//   .from-text {
+//     margin-left: -9%;
+//     width: 38%;
+//   }
+
+//   .from {
+//     font-size: 22px;
+//   }
+// }
