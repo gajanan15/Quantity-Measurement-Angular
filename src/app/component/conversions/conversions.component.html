@@ -6,15 +6,15 @@
     <p class="from">From</p>
     <input
       type="text"
-      [value]="inputOne"
-      (keyup)="conversionBox($event)"
+      [value]="boxValue === 'boxOne' ? 0 : finalResult"
+      (keyup)="conversionBox($event, 'boxOne')"
       class="input-value"
     />
     <select
       matNativeControl
       required
       class="selected-field"
-      (click)="subUnits($event)"   
+      (click)="subUnits($event)"
     >
       <option *ngFor="let subUnit of subUnit">
         {{ subUnit }}
@@ -25,13 +25,16 @@
     <p class="from">To</p>
     <input
       type="text"
-      [value]="finalResult" class="input-value"
+      [value]="boxValue === 'boxOne' ? finalResult : 0"
+      (keyup)="conversionBox($event, 'boxTwo')"
+      class="input-value"
     />
     <select
       matNativeControl
       required
       class="selected-field"
-      (click)="subUnitsTWO($event)"    
+      (click)="subUnitsTWO($event)"
+      
     >
       <option
         *ngFor="let subUnit of subUnit; let i = index"

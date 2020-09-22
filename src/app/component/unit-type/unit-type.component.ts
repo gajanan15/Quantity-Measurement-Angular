@@ -17,13 +17,13 @@ export class UnitTypeComponent implements OnInit {
   volume: string = 'card card-volume';
   onVolume: boolean = false;
   subUnit = [];
-  inputOne: number = 0;
-  inputTwo: number = 0;
   mainUnits = [];
   primaryUnit: string;
- 
+
+  @ViewChild(ConversionsComponent) conversionComponent: ConversionsComponent;
+
   constructor() {
-    this.primaryUnit="LENGTH"
+    this.primaryUnit = 'LENGTH';
     this.changeLength = true;
     this.temperature = 'card card-temperature';
     this.volume = 'card card-volume';
@@ -34,15 +34,11 @@ export class UnitTypeComponent implements OnInit {
     this.onTemperature = false;
     this.onVolume = false;
     this.subUnit = ['FEET', 'INCH', 'YARD', 'CENTIMETER'];
-    this.inputOne = 0;
-    this.inputTwo = 12;
   }
 
   ngOnInit(): void {}
 
   clickVolume(value) {
-    
-    console.log(value);
     this.primaryUnit = value;
     this.changeVolume = true;
     this.temperature = 'card card-temperature';
@@ -54,8 +50,7 @@ export class UnitTypeComponent implements OnInit {
     this.onLength = false;
     this.onTemperature = false;
     this.subUnit = ['LITRE', 'MILLILITRE', 'GALLON'];
-    this.inputOne = 0;
-    this.inputTwo = 1000;
+    this.conversionComponent.setFlag()
   }
 
   onOutVolume() {
@@ -67,7 +62,6 @@ export class UnitTypeComponent implements OnInit {
   }
 
   clickTemperature(value) {
-    console.log(value);
     this.primaryUnit = value;
     this.changeTemperature = true;
     this.length = 'card card-length';
@@ -79,8 +73,7 @@ export class UnitTypeComponent implements OnInit {
     this.onLength = false;
     this.onVolume = false;
     this.subUnit = ['CELSIUS', 'FAHRENHEIT'];
-    this.inputOne = 0;
-    this.inputTwo = 32;
+    this.conversionComponent.setFlag()
   }
 
   onTempOut() {
@@ -91,9 +84,8 @@ export class UnitTypeComponent implements OnInit {
     }
   }
 
-  clickLength(x) {
-    console.log(x);
-    this.primaryUnit = x;
+  clickLength(data) {
+    this.primaryUnit = data;
     this.changeLength = true;
     this.temperature = 'card card-temperature';
     this.volume = 'card card-volume';
@@ -104,8 +96,7 @@ export class UnitTypeComponent implements OnInit {
     this.onTemperature = false;
     this.onVolume = false;
     this.subUnit = ['FEET', 'INCH', 'YARD', 'CENTIMETER'];
-    this.inputOne = 0;
-    this.inputTwo = 12;
+    this.conversionComponent.setFlag()
   }
 
   onOut() {
