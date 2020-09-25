@@ -1,5 +1,5 @@
 import { ConversionsComponent } from './../conversions/conversions.component';
-import { Component, OnInit,ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-unit-type',
@@ -50,7 +50,7 @@ export class UnitTypeComponent implements OnInit {
     this.onLength = false;
     this.onTemperature = false;
     this.subUnit = ['LITRE', 'MILLILITRE', 'GALLON'];
-    this.conversionComponent.setFlag()
+    this.conversionComponent.setFlag(1, 1000);
   }
 
   onOutVolume() {
@@ -73,7 +73,7 @@ export class UnitTypeComponent implements OnInit {
     this.onLength = false;
     this.onVolume = false;
     this.subUnit = ['CELSIUS', 'FAHRENHEIT'];
-    this.conversionComponent.setFlag()
+    this.conversionComponent.setFlag(0, 32);
   }
 
   onTempOut() {
@@ -96,7 +96,7 @@ export class UnitTypeComponent implements OnInit {
     this.onTemperature = false;
     this.onVolume = false;
     this.subUnit = ['FEET', 'INCH', 'YARD', 'CENTIMETER'];
-    this.conversionComponent.setFlag()
+    this.conversionComponent.setFlag(1, 12);
   }
 
   onOut() {

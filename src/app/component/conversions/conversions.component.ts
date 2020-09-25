@@ -17,10 +17,10 @@ export class ConversionsComponent implements OnInit {
   units: string;
   initialUnit: string;
   outputUnit: string;
-  initialValue: number;
+  initialValue: number = 1;
   outputValue;
-  finalResult = 0;
-  boxValue: string = '';
+  finalResult: number = 12;
+  boxValue: string = 'boxOne';
   data;
 
   ngOnInit(): void {}
@@ -39,9 +39,11 @@ export class ConversionsComponent implements OnInit {
     };
   }
 
-  setFlag() {
+  setFlag(valueOne, valueTwo) {
     this.flagOne = false;
     this.flagTwo = false;
+    this.initialValue = valueOne;
+    this.finalResult = valueTwo;
   }
 
   originMethod() {
@@ -58,21 +60,21 @@ export class ConversionsComponent implements OnInit {
 
   conversionBox(data, boxName) {
     this.boxValue = boxName;
-    this.initialValue = data.target.value;
+    this.initialValue = data;
     if (!this.flagOne && !this.flagTwo) {
-      this.createData(this.subUnit[0], this.subUnit[1], data.target.value);
+      this.createData(this.subUnit[0], this.subUnit[1], data);
     }
 
     if (this.flagOne && !this.flagTwo) {
-      this.createData(this.initialUnit, this.subUnit[1], data.target.value);
+      this.createData(this.initialUnit, this.subUnit[1], data);
     }
 
     if (!this.flagOne && this.flagTwo) {
-      this.createData(this.subUnit[0], this.outputUnit, data.target.value);
+      this.createData(this.subUnit[0], this.outputUnit, data);
     }
 
     if (this.flagOne && this.flagTwo) {
-      this.createData(this.initialUnit, this.outputUnit, data.target.value);
+      this.createData(this.initialUnit, this.outputUnit, data);
     }
     this.originMethod();
   }

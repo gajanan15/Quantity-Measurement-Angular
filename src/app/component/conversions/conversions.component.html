@@ -1,13 +1,15 @@
 <div
   class="conversion-input"
-  fxLayout="row" fxLayoutAlign="center center" fxLayout.xs='column'
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  fxLayout.xs="column"
 >
   <div fxLayout="column" class="from-text">
     <p class="from">From</p>
     <input
       type="text"
-      [value]="boxValue === 'boxOne' ? 0 : finalResult"
-      (keyup)="conversionBox($event, 'boxOne')"
+      [value]="boxValue === 'boxOne' ? initialValue : finalResult"
+      (keyup)="conversionBox($event.target.value, 'boxOne')"
       class="input-value"
     />
     <select
@@ -21,12 +23,12 @@
       </option>
     </select>
   </div>
-  <div fxLayout="column"  class="to-text">
+  <div fxLayout="column" class="to-text">
     <p class="from">To</p>
     <input
       type="text"
-      [value]="boxValue === 'boxOne' ? finalResult : 0"
-      (keyup)="conversionBox($event, 'boxTwo')"
+      [value]="boxValue === 'boxOne' ? finalResult : initialValue"
+      (keyup)="conversionBox($event.target.value, 'boxTwo')"
       class="input-value"
     />
     <select
@@ -34,7 +36,6 @@
       required
       class="selected-field"
       (click)="subUnitsTWO($event)"
-      
     >
       <option
         *ngFor="let subUnit of subUnit; let i = index"
